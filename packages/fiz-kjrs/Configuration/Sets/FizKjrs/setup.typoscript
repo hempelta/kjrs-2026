@@ -1,0 +1,69 @@
+page = PAGE
+page {
+  meta {
+    viewport = width=device-width, initial-scale=1
+  }
+
+  includeCSSLibs {
+    main = EXT:ot_febuild/Resources/Public/Assets/Styles/Example.css
+  }
+
+  includeJSLibs {
+    main = EXT:ot_febuild/Resources/Public/Assets/JavaScript/Example.js
+  }
+
+  10 = PAGEVIEW
+  10 {
+    paths {
+      80 = EXT:ot_sitepackage/Resources/Private/PageView/{$sitekit.frameworks.frontend.directory}/
+    }
+
+    variables {
+      parentPageTitle = TEXT
+      parentPageTitle.data = levelfield:-1:title
+    }
+  }
+}
+
+#
+#@import "EXT:ot_cefluidtemplates/Configuration/TypoScript/setup.typoscript"
+#tt_content.ot_cefluidtemplates < lib.sitekitContentElement
+tt_content {
+  ot_cefluidtemplates {
+    #  templateName >
+    #  templateName = TEXT
+    #  templateName.stdWrap.data = flexform : pi_flexform:templateName
+
+    templateRootPaths {
+      80 = EXT:ot_sitepackage/Resources/Private/Extensions/OtCefluidtemplates/Templates/
+    }
+
+    partialRootPaths {
+      80 = EXT:ot_sitepackage/Resources/Private/Extensions/OtCefluidtemplates/Partials/
+    }
+
+    layoutRootPaths {
+      80 = EXT:ot_sitepackage/Resources/Private/Extensions/OtCefluidtemplates/Layouts/
+    }
+  }
+}
+
+
+tt_content.ot_sitekitcecard {
+  layoutRootPaths {
+    80 = EXT:ot_sitepackage/Resources/Private/ContentElements/{$sitekit.frameworks.frontend.directory}/Layouts/
+  }
+
+  partialRootPaths {
+    80 = EXT:ot_sitepackage/Resources/Private/ContentElements/{$sitekit.frameworks.frontend.directory}/Partials/
+  }
+
+  templateRootPaths {
+    80 = EXT:ot_sitepackage/Resources/Private/ContentElements/{$sitekit.frameworks.frontend.directory}/Templates/
+  }
+}
+
+
+#[applicationContext == "Development/Local"]
+#@import "EXT:ot_sitekitbase/Configuration/TypoScript/Development/DevAssets.typoscript"
+#[END]

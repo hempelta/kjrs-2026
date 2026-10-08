@@ -1,0 +1,12 @@
+includes:
+  - vendor/saschaegerer/phpstan-typo3/extension.neon
+
+parameters:
+  level: 7
+  paths:
+    - packages/
+  tmpDir: var/cache/phpstan
+  reportUnmatchedIgnoredErrors: false
+  ignoreErrors:
+    - '#Call to an undefined method TYPO3#'
+    - '#Constant TYPO3_MODE not found#'

@@ -1,0 +1,21 @@
+base: 'https://kjrs.de/'
+baseVariants:
+  -
+    base: 'https://stage.kjrs.de/'
+    condition: 'applicationContext == "Production/Staging"'
+  -
+    base: 'https://kjrs-2026.ddev.site/'
+    condition: 'applicationContext == "Development/Local"'
+dependencies:
+  - fizsoft/fiz-kjrs
+languages:
+  -
+    title: Deutsch
+    enabled: true
+    languageId: 0
+    base: /
+    locale: de_DE.UTF-8
+    navigationTitle: Deutsch
+    flag: de
+rootPageId: 1
+websiteTitle: ''

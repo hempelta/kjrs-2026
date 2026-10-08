@@ -1,0 +1,32 @@
+name: fizsoft/fiz-kjrs
+label: Configuration for customer
+
+dependencies:
+  - typo3/fluid-styled-content
+  - oliverthiele/ot-sitekit-base
+  - oliverthiele/ot-ceheader
+  - oliverthiele/ot-icons
+  - oliverthiele/ot-iconselector
+  - oliverthiele/ot-sitekit-base-backend-layouts
+#  - oliverthiele/ot-sitekit-base-backend-layout-advanced
+#  - oliverthiele/ot-sitekit-base-backend-layout-default
+#  - oliverthiele/ot-sitekit-base-backend-layout-homepage
+#  - oliverthiele/ot-sitekit-base-backend-layout-small-content
+  - oliverthiele/ot-sitekit-base-page
+  - oliverthiele/ot-sitekit-base-content-elements
+#  - oliverthiele/ot-sitekit-base-felogin
+  - typo3/form
+  - typo3/seo-sitemap
+#  - oliverthiele/ot-jobs
+  - oliverthiele/ot-cefluidtemplates
+#  - oliverthiele/ot-sitekit-ce-card
+  - oliverthiele/ot-sitekit-base-container-cards
+  - oliverthiele/ot-sitekit-base-container-columns
+  - oliverthiele/ot-sitekit-base-container-layouts
+  - oliverthiele/ot-countup
+  - oliverthiele/ot-faq
+#  - oliverthiele/ot-flippingbook
+  - oliverthiele/ot-gallery
+#  - oliverthiele/ot-markdown
+#  - oliverthiele/ot-testimonials
+#  - oliverthiele/ot-timeline

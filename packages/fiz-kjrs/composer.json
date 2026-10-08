@@ -1,0 +1,22 @@
+{
+	"name": "fizsoft/fiz-kjrs",
+	"type": "typo3-cms-extension",
+	"description": "TYPO3 Sitekit: Example Project 1",
+	"homepage": "https://fiz-soft.de/",
+	"license": "GPL-2.0-or-later",
+	"authors": [
+		{
+			"name": "Axel Hempelt",
+			"email": "a.hempelt@fiz-soft.de",
+			"role": "Developer"
+		}
+	],
+	"require": {
+		"oliverthiele/ot-sitekit-base": "@dev"
+	},
+	"extra": {
+		"typo3/cms": {
+			"extension-key": "fiz_kjrs"
+		}
+	}
+}

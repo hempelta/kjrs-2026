@@ -1,0 +1,121 @@
+{
+	"name": "fizsoft/kjrs-2026",
+	"description": "TYPO3 Sitekit: A base distribution that installs a predefined set of extensions for my standard TYPO3 setup.",
+	"version": "1.0.0",
+	"license": "GPL-2.0-or-later",
+	"type": "project",
+	"authors": [
+		{
+			"name": "Axel Hempelt",
+			"email": "a.hempelt@fiz-soft.de",
+			"role": "Developer"
+		}
+	],
+	"config": {
+		"allow-plugins": {
+			"helhum/typo3-console-plugin": true,
+			"typo3/class-alias-loader": true,
+			"typo3/cms-composer-installers": true,
+			"phpstan/extension-installer": true
+		},
+		"sort-packages": true
+	},
+	"minimum-stability": "dev",
+	"prefer-stable": true,
+	"require": {
+		"php": "^8.5",
+		"ext-dom": "*",
+		"ext-libxml": "*",
+		"erecht24/er24-rechtstexte": "^4.0",
+		"fizsoft/fiz-kjrs": "dev-main",
+		"friendsoftypo3/tt-address": "^10.0",
+		"georgringer/eventnews": "dev-main#0a32d7a301d17149d4b33ca4171545ea690d66b5",
+		"georgringer/news": "^14.0",
+		"oliverthiele/ot-alerts": "^0.5",
+		"oliverthiele/ot-cefluidtemplates": "^5.0",
+		"oliverthiele/ot-ceheader": "^3.0",
+		"oliverthiele/ot-countup": "^1.0",
+		"oliverthiele/ot-faq": "^7.0",
+		"oliverthiele/ot-flippingbook": "^3.0",
+		"oliverthiele/ot-gallery": "^2.0",
+		"oliverthiele/ot-heroimage": "^6.1",
+		"oliverthiele/ot-icons": "^3.0",
+		"oliverthiele/ot-iconselector": "^2.0",
+		"oliverthiele/ot-irrebuttons": "^5.0",
+		"oliverthiele/ot-sitekit-base": "^1.0",
+		"oliverthiele/ot-sitekit-base-distribution": "^3.0",
+		"oliverthiele/ot-sitekit-ce-card": "^3.0",
+		"oliverthiele/ot-sitekit-ce-imgtextoverlay": "^3.0",
+		"oliverthiele/ot-sitekit-ce-texticon": "^4.0",
+		"oliverthiele/ot-sitekit-ce-textmedia": "^3.0",
+		"oliverthiele/ot-testimonials": "^1.0",
+		"oliverthiele/ot-timeline": "^2.0"
+	},
+	"require-dev": {
+		"deployer/deployer": "^8.0",
+		"friendsofphp/php-cs-fixer": "^3.95",
+		"phpstan/phpstan": "^2.2",
+		"phpstan/extension-installer": "^1.4",
+		"saschaegerer/phpstan-typo3": "^3.0",
+		"squizlabs/php_codesniffer": "^4.0",
+		"ssch/typo3-rector": "^3.14",
+		"roave/security-advisories": "dev-latest",
+		"typo3/cms-lowlevel": "^14.3",
+		"typo3/coding-standards": "^0.9",
+		"typo3/testing-framework": "^9.5"
+	},
+	"repositories": {
+		"local": {
+			"type": "path",
+			"url": "./packages/*",
+			"options": {
+				"symlink": true
+			},
+			"canonical": false
+		},
+		"brevo-newsletter": {
+			"type": "vcs",
+			"url": "git@github.com:hempelta/brevo-newsletter.git"
+		}
+	},
+	"scripts": {
+		"typo3-cms-scripts": "typo3 install:fixfolderstructure",
+		"post-autoload-dump": [
+			"@typo3-cms-scripts"
+		],
+		"code-quality": [
+			"@phpstan",
+			"@php-cs-fixer",
+			"@php-codesniffer"
+		],
+		"db-export": [
+			"typo3 database:export -c Default -e 'cf_*' -e 'cache_*' -e '[bf]e_users' -e '[bf]e_sessions' -e sys_log -e sys_history -e tx_extensionmanager_domain_model_extension > data/dev_dump.sql"
+		],
+		"db-export-full": [
+			"typo3 database:export -c Default > data/dev_dump.sql"
+		],
+		"db-backup": [
+			"vendor/bin/typo3 database:export -c Default | gzip > data/dump_$(date +%Y%m%d_%H%M%S).sql.gz"
+		],
+		"db-import": [
+			"typo3 database:import < data/dev_dump.sql"
+		],
+		"ext-setup": [
+			"typo3 install:fixfolderstructure",
+			"typo3 extension:setup",
+			"typo3 database:updateschema",
+			"typo3 language:update",
+			"typo3 cache:flush",
+			"typo3 cache:warmup"
+		],
+		"fe-build": "npm --prefix Build/Default run build",
+		"fe-start": "npm --prefix Build/Default run start",
+		"fe-watch": [
+			"./bin-dev/feWatch.sh &"
+		],
+		"fe-watch-stop": "./bin-dev/stopFeWatch.sh",
+		"fe-analyze": [
+			"npm --prefix Build/Default run analyze"
+		]
+	}
+}

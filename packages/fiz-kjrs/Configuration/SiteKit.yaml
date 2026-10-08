@@ -1,0 +1,30 @@
+# SiteKit Registry — Sitepackage declarations
+#
+# ContentBlocks from this sitepackage are registered automatically via their own
+# SiteKit.yaml files in ContentBlocks/{Category}/{Name}/SiteKit.yaml.
+# No manual entry needed here for ContentBlocks.
+#
+# Use "elements" for third-party extensions that do not ship their own SiteKit.yaml
+# (e.g. tx_news_pi1, tt_address_pi1):
+#
+# elements:
+#   - ctype: tx_news_pi1
+#     groups: [group_content_wide]
+#     grid: { minCols: 6, requiresFullWidth: false }
+#
+# Use "overrides" to adjust group assignments from any installed extension.
+# addToGroups    — adds the CType to additional groups
+# removeFromGroups — removes the CType from groups it was registered in
+
+overrides:
+  - ctype: textmedia
+    removeFromGroups: ['*']
+  - ctype: html
+    removeFromGroups: ['*']
+#   - ctype: ot_ceheader
+#     addToGroups: [group_cards]
+#     removeFromGroups: [group_hero]
+  - ctype: uploads
+    addToGroups: ['group_content_wide']
+#   - ctype: ot_ceheader
+elements: []
