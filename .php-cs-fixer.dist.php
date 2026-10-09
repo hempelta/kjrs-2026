@@ -5,7 +5,7 @@ use TYPO3\CodingStandards\CsFixerConfig;
 $config = CsFixerConfig::create();
 
 $config->getFinder()
-    ->in(__DIR__ . '/packages/ot-gallery/')
+    ->in(__DIR__ . '/packages/')
     ->exclude('Tests/Fixtures')
     ->exclude('var')
     ->exclude('public');
