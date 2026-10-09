@@ -40,6 +40,9 @@ auth.json
 !/data/.gitkeep
 /sql/
 
+# Customer correspondence contains personal data; the repository is public
+/docs/kommunikation-mit-kunden/
+
 # DDEV
 
 /.ddev/*

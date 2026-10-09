@@ -72,6 +72,18 @@ als `EXT:ot_febuild/…`; `Website/SVG` ist die komplette Font-Awesome-Pro-Symbo
 `vendor/oliverthiele/ot-sitekit-base/Resources/Private/Components`. Icon-Umbenennungen für
 Font Awesome 7: `packages/fiz-kjrs/Configuration/Mapping/FontAwesome_7.php`.
 
+## Kundenkommunikation
+
+`docs/kommunikation-mit-kunden/` sammelt Vorgaben des Kunden **und** Axels Antworten als
+Projekthistorie, je Vorgang ein Ordner `JJJJMMTT-Thema/` (Datum des Eingangs bzw. der Antwort).
+Aufträge daraus werden umgesetzt; Abweichungen von der Vorgabe gehören in die Antwort an den Kunden.
+Der Ordner ist per `.gitignore` ausgeschlossen: Die Mails enthalten personenbezogene Daten, das Repo
+ist öffentlich. Die Historie liegt nur lokal. Projektdaten ohne Personenbezug (z. B.
+`docs/weiterleitungen/`) werden versioniert.
+
+Umgesetzt: Seitenbaum aus `20260807-Seitenbaum-Struktur/` (am 09.10.2026 in der lokalen DDEV-DB
+angelegt; Seiten liegen nur in der Datenbank, nicht im Repo).
+
 ## Deployment
 
 Deployer 8 (`deploy.php`), Ziele `stage` (Branch `develop`, `Production/Staging`) und `live`
