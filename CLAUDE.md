@@ -99,6 +99,15 @@ Composer-Modus lässt sich die Extension nicht abschalten, die beiden Schalter s
 
 Alles, was zum Go-live erledigt sein muss: GitHub-Issue #2 „Go-live checklist".
 
+## Git-Ablauf
+
+Entscheidung Axel, 09.10.2026: **keine Pull-Requests.** `git.md` verlangt sie nur bei weiteren
+Mitwirkenden, geschütztem `main` oder CI — nichts davon trifft zu.
+- **Alltag:** Commit auf `develop`, Push. Nicht nach `main` mergen.
+- **Release** (ein Stand soll live): Version in `CHANGELOG.md`, lokal
+  `git merge --no-ff develop` auf `main`, annotierter Tag auf dem Merge-Commit, dann `main`,
+  Tag und `develop` pushen.
+
 ## Deployment
 
 Deployer 8 (`deploy.php`), Ziele `stage` (Branch `develop`, `Production/Staging`) und `live`
