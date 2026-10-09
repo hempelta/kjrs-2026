@@ -81,6 +81,9 @@ Der Ordner ist per `.gitignore` ausgeschlossen: Die Mails enthalten personenbezo
 ist öffentlich. Die Historie liegt nur lokal. Projektdaten ohne Personenbezug (z. B.
 `docs/weiterleitungen/`) werden versioniert.
 
+Offene Fragen an den Kunden werden in `docs/fragen-an-kunden.md` gesammelt und gebündelt
+übergeben; dort wird auch die Antwort eingetragen.
+
 Umgesetzt: Seitenbaum aus `20260807-Seitenbaum-Struktur/` (am 09.10.2026 in der lokalen DDEV-DB
 angelegt; Seiten liegen nur in der Datenbank, nicht im Repo).
 
