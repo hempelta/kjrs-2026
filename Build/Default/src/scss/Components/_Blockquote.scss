@@ -1,0 +1,25 @@
+blockquote.blockquote {
+    position: relative;
+    margin: var(--space-6) 0;
+    padding: var(--space-4) var(--space-5);
+    padding-left: var(--space-5);
+    border-left: 3px solid var(--color-accent);
+    background-color: transparent;
+    font-family: 'Source Serif 4', Georgia, 'Times New Roman', serif;
+    font-style: italic;
+    font-size: 1.125rem;
+    line-height: 1.6;
+    color: var(--color-text-secondary);
+
+    p:last-child {
+        margin-bottom: 0;
+    }
+
+    footer {
+        margin-top: var(--space-3);
+        font-family: 'Inter', system-ui, -apple-system, sans-serif;
+        font-size: var(--font-size-small);
+        font-style: normal;
+        color: var(--color-text-muted);
+    }
+}

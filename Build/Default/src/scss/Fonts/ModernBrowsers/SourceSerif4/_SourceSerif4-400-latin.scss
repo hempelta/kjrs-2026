@@ -1,0 +1,9 @@
+@import "../../../Config/Variables";
+/* source-serif-4-regular - latin */
+@font-face {
+    font-display: swap;
+    font-family: 'Source Serif 4';
+    font-style: normal;
+    font-weight: 400;
+    src: url('#{$site-url-prefix}/Fonts/SourceSerif4/source-serif-4-v14-latin-regular.woff2') format('woff2');
+}

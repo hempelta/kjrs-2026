@@ -101,7 +101,7 @@ function setSitename(string $prefix)
 }
 
 if ($context->isDevelopment() && $context->__toString() === 'Development/Local') {
-    loadEnvFile('.env.ddev');
+    loadEnvFile('.env.development');
     setDevelopmentDefaultSettings();
     setSitename('DDEV');
 }

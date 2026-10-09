@@ -88,6 +88,9 @@
 			"@php-cs-fixer",
 			"@php-codesniffer"
 		],
+		"phpstan": "phpstan analyse",
+		"php-cs-fixer": "vendor/bin/php-cs-fixer fix",
+		"php-codesniffer": "vendor/bin/phpcs",
 		"db-export": [
 			"typo3 database:export -c Default -e 'cf_*' -e 'cache_*' -e '[bf]e_users' -e '[bf]e_sessions' -e sys_log -e sys_history -e tx_extensionmanager_domain_model_extension > data/dev_dump.sql"
 		],

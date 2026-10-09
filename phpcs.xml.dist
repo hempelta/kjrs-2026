@@ -3,11 +3,10 @@
     <!-- Beschreibung -->
     <description>TYPO3 CGL / PSR-12 conform code style checks for this project</description>
 
-    <!-- Standard: TYPO3 and PSR-12 -->
-    <rule ref="PSR12" />
+    <file>packages/</file>
 
-    <!-- TYPO3 coding standard for extensions -->
-    <rule ref="TYPO3Extension" />
+    <!-- Standard: PSR-12 -->
+    <rule ref="PSR12" />
 
    <!-- Add or modify specific rules -->
    <rule ref="Generic.Files.LineLength">

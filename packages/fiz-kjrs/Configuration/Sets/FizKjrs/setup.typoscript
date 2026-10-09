@@ -15,7 +15,7 @@ page {
   10 = PAGEVIEW
   10 {
     paths {
-      80 = EXT:ot_sitepackage/Resources/Private/PageView/{$sitekit.frameworks.frontend.directory}/
+      80 = EXT:fiz_kjrs/Resources/Private/PageView/{$sitekit.frameworks.frontend.directory}/
     }
 
     variables {
@@ -35,15 +35,15 @@ tt_content {
     #  templateName.stdWrap.data = flexform : pi_flexform:templateName
 
     templateRootPaths {
-      80 = EXT:ot_sitepackage/Resources/Private/Extensions/OtCefluidtemplates/Templates/
+      80 = EXT:fiz_kjrs/Resources/Private/Extensions/OtCefluidtemplates/Templates/
     }
 
     partialRootPaths {
-      80 = EXT:ot_sitepackage/Resources/Private/Extensions/OtCefluidtemplates/Partials/
+      80 = EXT:fiz_kjrs/Resources/Private/Extensions/OtCefluidtemplates/Partials/
     }
 
     layoutRootPaths {
-      80 = EXT:ot_sitepackage/Resources/Private/Extensions/OtCefluidtemplates/Layouts/
+      80 = EXT:fiz_kjrs/Resources/Private/Extensions/OtCefluidtemplates/Layouts/
     }
   }
 }
@@ -51,15 +51,15 @@ tt_content {
 
 tt_content.ot_sitekitcecard {
   layoutRootPaths {
-    80 = EXT:ot_sitepackage/Resources/Private/ContentElements/{$sitekit.frameworks.frontend.directory}/Layouts/
+    80 = EXT:fiz_kjrs/Resources/Private/ContentElements/{$sitekit.frameworks.frontend.directory}/Layouts/
   }
 
   partialRootPaths {
-    80 = EXT:ot_sitepackage/Resources/Private/ContentElements/{$sitekit.frameworks.frontend.directory}/Partials/
+    80 = EXT:fiz_kjrs/Resources/Private/ContentElements/{$sitekit.frameworks.frontend.directory}/Partials/
   }
 
   templateRootPaths {
-    80 = EXT:ot_sitepackage/Resources/Private/ContentElements/{$sitekit.frameworks.frontend.directory}/Templates/
+    80 = EXT:fiz_kjrs/Resources/Private/ContentElements/{$sitekit.frameworks.frontend.directory}/Templates/
   }
 }
 

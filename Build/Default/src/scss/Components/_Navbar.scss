@@ -1,0 +1,205 @@
+@import "../Config/Variables";
+
+// =========================================================
+// Top Navigation (1st row: Logo + service nav)
+// =========================================================
+
+header:has(.sk-top-bar) {
+    [data-bs-theme="light"] & {
+        background-color: #FFFFFF;
+        border-bottom: 1px solid $navy-100;
+    }
+}
+
+.sk-top-bar .sk-menu-top {
+    [data-bs-theme="light"] & {
+        --bs-nav-link-color: #{$navy-500};
+        --bs-nav-link-hover-color: #{$navy-900};
+    }
+}
+
+.ot-top-wrapper {
+    background-color: transparent;
+}
+
+// =========================================================
+// Logo area
+// =========================================================
+
+.sk-pageheader-logo {
+    display: inline-flex;
+    padding: var(--space-3) 0;
+}
+
+// =========================================================
+// Main Navigation (2nd row)
+// bg-primary from SiteKit template uses --bs-primary-rgb.
+// We override this variable locally in light mode so the
+// nav background adapts without fighting !important.
+// =========================================================
+
+.sticky-top {
+    [data-bs-theme="light"] & {
+        --bs-primary-rgb: #{red($navy-50)}, #{green($navy-50)}, #{blue($navy-50)};
+        box-shadow: 0 1px 0 #{$navy-100};
+    }
+}
+
+.navbar {
+    background-color: transparent;
+    backdrop-filter: blur(12px);
+}
+
+.navbar-brand {
+    color: $navy-100;
+    transition: color 150ms ease;
+
+    &:hover {
+        color: #FFFFFF;
+    }
+
+    [data-bs-theme="light"] & {
+        color: $navy-500;
+
+        &:hover {
+            color: $navy-900;
+        }
+    }
+}
+
+// =========================================================
+// Nav links
+// =========================================================
+
+.navbar .nav-link {
+    color: $navy-200;
+    font-weight: 500;
+    border-radius: var(--ot-radius-small);
+    transition: color 150ms ease;
+
+    &:hover {
+        color: $navy-50;
+    }
+
+    &.active {
+        color: #FFFFFF;
+    }
+
+    [data-bs-theme="light"] & {
+        color: $navy-500;
+
+        &:hover {
+            color: $navy-900;
+        }
+
+        &.active {
+            color: $navy-900;
+        }
+    }
+}
+
+// =========================================================
+// Dropdown toggle button (chevron icon)
+// =========================================================
+
+.sk-main-menu .nav-item.dropdown {
+    display: flex;
+    align-items: center;
+}
+
+.sk-main-menu .dropdown-toggle-btn {
+    color: $navy-300;
+    border-radius: var(--ot-radius-small);
+    transition: color 150ms ease;
+
+    &:hover {
+        color: $navy-50;
+    }
+
+    [data-bs-theme="light"] & {
+        color: $navy-400;
+
+        &:hover {
+            color: $navy-900;
+        }
+    }
+}
+
+// =========================================================
+// Dropdown menu + items
+// Uses accent-outline pattern for consistency with ColorModes
+// =========================================================
+
+.sk-main-menu .dropdown-menu {
+    background-color: $navy-700;
+    border-color: $navy-600;
+    border-radius: var(--ot-radius-medium);
+    padding: 0.25rem 0.3rem;
+
+    .dropdown-item {
+        margin: 2px 0;
+        color: $navy-200;
+        border-radius: 0.375rem;
+        outline: var(--ot-accent-outline-width) solid transparent;
+        outline-offset: var(--ot-accent-outline-offset);
+        transition: outline-color 150ms ease, color 150ms ease;
+
+        &:focus,
+        &:active {
+            background-color: transparent;
+            color: $navy-200;
+        }
+
+        &:hover {
+            background-color: transparent;
+            color: $navy-50;
+            outline-color: var(--ot-accent-outline-color);
+        }
+
+        &:focus-visible {
+            background-color: transparent;
+            color: $navy-50;
+            outline-color: var(--ot-accent-outline-color);
+        }
+
+        &.active,
+        &.current {
+            background-color: transparent;
+            color: #FFFFFF;
+            outline-color: var(--ot-accent-outline-color);
+        }
+    }
+
+    [data-bs-theme="light"] & {
+        background-color: #FFFFFF;
+        border-color: $navy-100;
+
+        .dropdown-item {
+            color: $navy-900;
+
+            &:focus,
+            &:active {
+                background-color: transparent;
+                color: $navy-900;
+            }
+
+            &:hover {
+                background-color: transparent;
+                color: $navy-900;
+                outline-color: var(--ot-accent-outline-color);
+            }
+
+            &:focus-visible {
+                background-color: transparent;
+                color: $navy-900;
+                outline-color: var(--ot-accent-outline-color);
+            }
+
+            &.active,
+            &.current {
+                color: $navy-900;
+                outline-color: var(--ot-accent-outline-color);
+            }
+        }
+    }
+}

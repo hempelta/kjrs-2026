@@ -1,0 +1,88 @@
+// =========================================================
+// Primary Button (CTA)
+// Dark mode: orange-500 bg, navy-900 text
+// Light mode: orange-600 bg, white text (3.46:1 — AA large text)
+// =========================================================
+
+.btn-primary {
+    background-color: var(--color-accent);
+    border-color: var(--color-accent);
+    color: $navy-900;
+    font-weight: 600;
+    padding: $space-3 $space-5;
+    transition: background-color 150ms ease, box-shadow 150ms ease;
+
+    &:hover,
+    &:active {
+        background-color: var(--color-accent-hover);
+        border-color: var(--color-accent-hover);
+        color: $navy-900;
+    }
+
+    &:focus-visible {
+        outline: var(--ot-accent-outline-width) solid var(--ot-accent-outline-color);
+        outline-offset: var(--ot-accent-outline-offset);
+    }
+}
+
+[data-bs-theme="dark"] .btn-primary {
+    color: $navy-900;
+
+    &:hover,
+    &:active {
+        color: $navy-900;
+    }
+}
+
+[data-bs-theme="light"] .btn-primary {
+    background-color: $orange-500;
+    border-color: $orange-500;
+    color: $navy-900;
+
+    &:hover,
+    &:active {
+        background-color: $orange-600;
+        border-color: $orange-600;
+        color: $navy-900;
+    }
+}
+
+// =========================================================
+// Secondary Button (Outline)
+// =========================================================
+
+.btn-outline-primary {
+    color: var(--color-text-primary);
+    border: 2px solid var(--color-border-default);
+    background-color: transparent;
+    font-weight: 600;
+    padding: $space-3 $space-5;
+    transition: background-color 150ms ease, border-color 150ms ease;
+
+    &:hover,
+    &:active {
+        background-color: var(--color-bg-elevated);
+        border-color: var(--color-text-secondary);
+        color: var(--color-text-primary);
+    }
+}
+
+// =========================================================
+// Ghost / Text Button
+// =========================================================
+
+.btn-ghost {
+    color: var(--color-text-primary);
+    background: transparent;
+    border: none;
+    font-weight: 600;
+    padding: $space-3 $space-5;
+    text-decoration: none;
+    transition: background-color 150ms ease;
+
+    &:hover {
+        background-color: var(--color-bg-elevated);
+        text-decoration: underline;
+        text-underline-offset: 3px;
+    }
+}

@@ -1,0 +1,87 @@
+@import "../Config/Variables";
+
+.main-content main > .frame-type-ot_heroimage:first-child {
+    margin-top: -30px;
+}
+
+.ot-heroimage {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 0;
+
+    .image-container {
+        position: relative;
+
+        img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.5);
+            pointer-events: none;
+        }
+    }
+
+    .text-overlay-container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+
+        .ot-heroimage-text-overlay-desktop {
+            display: none;
+        }
+
+        .ot-ceheader-subheader {
+            font-size: 50%;
+        }
+    }
+
+    .text-overlay-container .container {
+        .ot-ceheader-text .header-line {
+            font-family: 'Source Serif 4', Georgia, 'Times New Roman', serif;
+            font-weight: 600;
+            line-height: 1.1;
+            font-size: var(--font-size-display);
+        }
+
+        .ot-ceheader-text .ot-ceheader-subheader {
+            margin-top: var(--space-5);
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            font-weight: 400;
+        }
+
+        span {
+            color: #fff !important;
+        }
+    }
+}
+
+@include media-breakpoint-up(md) {
+    .ot-heroimage-text-overlay-mobile {
+        display: none;
+    }
+
+    .ot-heroimage-text-overlay-desktop {
+        display: block;
+        position: relative;
+
+        &::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(
+                to bottom,
+                rgba(0, 0, 0, 0.1) 0%,
+                rgba(0, 0, 0, 0.6) 100%
+            );
+            pointer-events: none;
+        }
+    }
+}

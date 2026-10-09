@@ -1,0 +1,9 @@
+/* TYPO3 Form Framework */
+.ctype-form_formframework .form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-control:focus {
+    border-color: var(--bs-primary);
+    box-shadow: 0 0 0 0.2rem rgba(var(--bs-primary-rgb), 0.25);
+}

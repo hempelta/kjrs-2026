@@ -1,0 +1,18 @@
+@import "../Config/Variables";
+
+.ot-cta-block {
+    --cb-cta-margin-top: var(--space-4);
+    --cb-cta-padding-top: var(--space-4);
+    --cb-cta-text-margin-bottom: var(--space-3);
+    --cb-cta-text-font-size: var(--font-size-h3);
+    --cb-cta-tilt-border-radius: var(--ot-radius-medium);
+    --cb-cta-glow-color: #{rgba($orange-500, 0.15)};
+}
+
+.ot-cta-tilt .btn {
+    &:hover,
+    &:active {
+        background-color: var(--color-accent);
+        border-color: var(--color-accent);
+    }
+}

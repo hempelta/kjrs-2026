@@ -1,0 +1,63 @@
+@import "Config/Variables";
+
+// =========================================================
+// Skip Links
+// Full-width bar overlaying the top navigation area.
+// Only visible on keyboard focus (Tab).
+// =========================================================
+
+.page-skip-links {
+    &.visually-hidden-focusable:not(:focus):not(:focus-within) {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+    }
+
+    &:focus {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 10000;
+        display: block;
+        width: 100%;
+        padding: var(--space-3) var(--space-4);
+        background-color: $navy-900;
+        color: $navy-50;
+        font-family: 'Inter', system-ui, -apple-system, sans-serif;
+        font-size: var(--font-size-body);
+        font-weight: 600;
+        text-align: center;
+        text-decoration: none;
+        outline: none;
+        border-bottom: 2px solid $orange-500;
+    }
+}
+
+// =========================================================
+// Visually hidden header-only elements (header_layout = 100)
+// ctype-header with a visually-hidden heading has no visible
+// content — its wrapper should not take up space.
+// =========================================================
+
+.ctype-header:has(.visually-hidden) {
+    margin-bottom: 0;
+}
+
+// =========================================================
+// Reduced Motion
+// =========================================================
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}

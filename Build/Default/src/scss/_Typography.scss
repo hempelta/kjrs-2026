@@ -1,0 +1,117 @@
+// =========================================================
+// Headings
+// =========================================================
+
+h1, h2, h3 {
+    font-family: 'Source Serif 4', Georgia, 'Times New Roman', serif;
+    font-weight: 600;
+    line-height: 1.2;
+    color: var(--color-text-primary);
+
+    strong {
+        color: var(--color-accent);
+        font-weight: 700;
+
+        [data-bs-theme="light"] & {
+            color: inherit;
+        }
+    }
+}
+
+h4, h5, h6 {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    font-weight: 600;
+    line-height: 1.3;
+    color: var(--color-text-primary);
+}
+
+h1 { font-size: var(--font-size-h1); }
+h2 { font-size: var(--font-size-h2); }
+h3 { font-size: var(--font-size-h3); }
+h4 { font-size: var(--font-size-h4); }
+h5 { font-size: var(--font-size-h5); }
+h6 { font-size: var(--font-size-h6); }
+
+// =========================================================
+// Body Text
+// =========================================================
+
+body {
+    font-size: var(--font-size-body);
+    line-height: 1.6;
+    color: var(--color-text-primary);
+    background-color: var(--color-bg-page);
+}
+
+.lead {
+    font-size: var(--font-size-lead);
+    color: var(--color-text-primary);
+}
+
+p {
+    color: var(--color-text-secondary);
+}
+
+small,
+.small {
+    font-size: var(--font-size-small);
+}
+
+// =========================================================
+// Links
+// =========================================================
+
+a {
+    color: var(--color-link);
+    text-decoration-color: var(--color-link-decoration);
+    text-underline-offset: 0.25em;
+    transition: color 150ms ease, text-decoration-color 150ms ease, text-underline-offset 150ms ease;
+
+    &:hover {
+        color: var(--color-link-hover);
+        text-decoration-color: var(--color-link-hover);
+        text-underline-offset: 0.35em;
+    }
+
+    &:visited {
+        color: var(--color-link-visited);
+    }
+}
+
+// =========================================================
+// Preheader / Eyebrow
+// =========================================================
+
+.ot-preheader {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    font-size: var(--font-size-preheader);
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--color-text-secondary);
+    margin-bottom: var(--space-2);
+}
+
+// =========================================================
+// Display (Hero)
+// =========================================================
+
+.ot-display {
+    font-family: 'Source Serif 4', Georgia, 'Times New Roman', serif;
+    font-size: var(--font-size-display);
+    font-weight: 600;
+    line-height: 1.1;
+}
+
+// =========================================================
+// Prose Container (reading width)
+// =========================================================
+
+.ot-prose {
+    max-width: 70ch;
+    margin-inline: auto;
+
+    > * + * {
+        margin-top: var(--space-5);
+    }
+}
