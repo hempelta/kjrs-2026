@@ -80,7 +80,16 @@ Deployer 8 (`deploy.php`), Ziele `stage` (Branch `develop`, `Production/Staging`
 **Hostdaten stehen nicht im Repo** (es ist öffentlich). `deploy.php` und die `bin-dev`-Skripte
 lesen sie aus den lokalen, ignorierten Dateien `.env` (live) bzw. `.env.staging` (stage):
 `REMOTE_SSH_ALIAS` (Alias aus `~/.ssh/config`), `REMOTE_PROJECT_ROOT`, `DOMAIN`, optional
-`PHP_BIN`. Fehlt etwas, bricht `deploy:check` mit dem Namen der fehlenden Variable ab.
+`PHP_BIN` und `DEPLOY_HTTP_AUTH`. Fehlt etwas, bricht `deploy:check` mit dem Namen der fehlenden
+Variable ab — vor jeder Verbindung zum Server.
+
+**Stand 09.10.2026 — noch kein Zielserver.** Für das Projekt wird ein neuer Webspace bei all-inkl
+eingerichtet. Bis dahin steht in beiden Dateien der Alias `kjrs2026`, der bewusst **nirgends
+definiert** ist: Ein versehentlicher Deploy kann so die bisherige Installation (Alias `kjrs`)
+nicht treffen. `REMOTE_PROJECT_ROOT` ist leer, `deploy:check` hält den Deploy deshalb an.
+Offen, sobald der Webspace steht: Alias in `~/.ssh/config`, `REMOTE_PROJECT_ROOT`, Lesezugriff
+des Servers auf das GitHub-Repo, Passwortschutz der Stage (`.htaccess`/`.htpasswd` als geteilte
+Dateien auf dem Server; die Zugangsdaten stehen in `.env.staging` als `DEPLOY_HTTP_AUTH`).
 
 Was der Ablauf über das Standardrezept hinaus tut — die Begründungen stehen in `deploy.php`:
 - `build:frontend` baut **in DDEV**; `upload:frontend` überträgt das Bauergebnis, die
@@ -88,9 +97,8 @@ Was der Ablauf über das Standardrezept hinaus tut — die Begründungen stehen 
 - `deploy:siteconfig` sichert im Backend geänderte `config/sites` nach
   `shared/siteconfig-backups/`, bevor das Release sie überschreibt — das Repo bleibt die Quelle.
 - `deploy:opcache` setzt den FPM-Opcache per HTTP zurück und **belegt**, dass der Webprozess das
-  neue Release ausführt; `deploy:proof` lässt den Deploy sonst am Ende scheitern. Eine Stage
-  hinter Passwortschutz braucht `DEPLOY_HTTP_AUTH` oder eine Ausnahme für
-  `_dep_opcache_reset_*.php` in ihrer geteilten `.htaccess`.
+  neue Release ausführt; `deploy:proof` lässt den Deploy sonst am Ende scheitern. Die Stage liegt
+  hinter Passwortschutz; der Aufruf nimmt die Zugangsdaten aus `DEPLOY_HTTP_AUTH`.
 - `deploy:languages` lädt Sprachpakete nur nach, wenn `shared/var/labels` leer ist.
 - `deploy:publish` aus dem Rezept wird bewusst **nicht** benutzt: Es meldet Erfolg vor dem
   Opcache-Beleg.
@@ -103,6 +111,3 @@ Hilfsskripte in `bin-dev/` (Argument `live` oder `stage`): `fetch-db.sh` (DB-Abz
 und Import in DDEV), `sync-fileadmin.sh` (spiegelt fileadmin mit `--delete`),
 `composerUpdate.sh` (Update auf `develop` → Prüfungen → Merge `--no-ff` nach `main` → Deploy
 stage, dann live).
-
-Aus der SiteKit-Vorlage stammen noch `copyLiveToDdev.sh` und `copyDdevToDev.sh` (rsync ohne
-Deployer, `REMOTE_HOST` leer → brechen ab). Sie überschneiden sich mit den Skripten oben.
