@@ -37,11 +37,17 @@ log_warning() {
 
 sync_files() {
     local SUB_PATH=$1
-    local DELETE_OPTION=$2
-    shift 2
+    local DELETE_OPTION=${2:-}
+    shift $(( $# < 2 ? $# : 2 ))
     local EXCLUDES=("$@")
 
     local LOCAL_SUB_PATH="${SUB_PATH%/}"
+
+    # A trailing slash syncs the directory's contents; a file must not get one
+    local LOCAL_SOURCE="${LOCAL_BASE_PATH}${LOCAL_SUB_PATH}"
+    if [ -d "$LOCAL_SOURCE" ]; then
+        LOCAL_SOURCE="${LOCAL_SOURCE}/"
+    fi
 
     local DELETE_FLAG=""
     if [ "$DELETE_OPTION" == "--delete" ]; then
@@ -57,7 +63,7 @@ sync_files() {
     log_info "Syncing ${LOCAL_SUB_PATH} to ${REMOTE_HOST}:${REMOTE_BASE_PATH}/${SUB_PATH}"
 
     if ! rsync -avzP $DELETE_FLAG -e "ssh -p ${SSH_PORT}" "${EXCLUDE_OPTS[@]}" \
-        "${LOCAL_BASE_PATH}${LOCAL_SUB_PATH}/" \
+        "$LOCAL_SOURCE" \
         "${REMOTE_USER}@${REMOTE_HOST}:${REMOTE_BASE_PATH}/${SUB_PATH}"; then
         log_error "Failed to sync ${LOCAL_SUB_PATH}"
         return 1
