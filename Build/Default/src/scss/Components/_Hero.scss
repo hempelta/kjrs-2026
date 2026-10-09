@@ -1,0 +1,123 @@
+@import "../Config/Variables";
+
+// =========================================================
+// Hero Section (gradient-based, no image required)
+// The first visual impression — large typography on a deep
+// navy gradient with a signature accent line.
+// =========================================================
+
+.ot-hero {
+    background: linear-gradient(135deg, $navy-950 0%, $navy-800 50%, $navy-700 100%);
+    padding: clamp(5rem, 12vw, 10rem) 0 clamp(4rem, 8vw, 7rem);
+    position: relative;
+    overflow: hidden;
+
+    > canvas {
+        z-index: 0;
+    }
+
+    > .container {
+        position: relative;
+        z-index: 1;
+    }
+
+    // Signature accent line — the one detail that makes this site memorable
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 3px;
+        background: linear-gradient(
+            90deg,
+            var(--color-bg-page) 0%,
+            $orange-500 15%,
+            $orange-500 85%,
+            var(--color-bg-page) 100%
+        );
+    }
+}
+
+.ot-hero-preheader {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    font-size: var(--font-size-preheader);
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: $navy-200;
+    margin-bottom: var(--space-4);
+}
+
+.ot-hero-headline {
+    font-family: 'Source Serif 4', Georgia, 'Times New Roman', serif;
+    font-size: var(--font-size-display);
+    font-weight: 600;
+    line-height: 1.1;
+    color: #FFFFFF;
+    max-width: 18ch;
+    margin-bottom: var(--space-5);
+}
+
+.ot-hero-subheadline {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    font-size: var(--font-size-lead);
+    font-weight: 400;
+    line-height: 1.6;
+    color: $navy-200;
+    max-width: 55ch;
+}
+
+.ot-hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-4);
+    margin-top: var(--space-8);
+}
+
+// =========================================================
+// Signature Accent Divider
+// A subtle diagonal orange line between sections.
+// Use sparingly — max 2-3 times per page.
+// =========================================================
+
+.ot-accent-divider {
+    height: 3px;
+    margin: 0;
+    border: none;
+    background: linear-gradient(
+        90deg,
+        var(--color-bg-page) 0%,
+        $orange-500 15%,
+        $orange-500 85%,
+        var(--color-bg-page) 100%
+    );
+}
+
+// =========================================================
+// Feature Section
+// Alternating content sections with clear typography
+// hierarchy and generous whitespace.
+// =========================================================
+
+.ot-feature-section {
+    padding: var(--section-padding) 0;
+
+    .ot-feature-eyebrow {
+        font-family: 'Inter', system-ui, -apple-system, sans-serif;
+        font-size: var(--font-size-preheader);
+        font-weight: 600;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--color-text-muted);
+        margin-bottom: var(--space-3);
+    }
+
+    h2 {
+        max-width: 25ch;
+    }
+
+    .lead {
+        max-width: 65ch;
+    }
+}

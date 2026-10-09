@@ -1,0 +1,41 @@
+.auto-column-text {
+    column-width: 20em;
+    column-gap: 3rem;
+}
+
+//.two-columns-text {
+//    column-count: 2;
+//    column-gap: 3rem;
+//}
+//
+//.three-columns-text {
+//    column-count: 3;
+//    column-gap: 3rem;
+//}
+
+.auto-column-text
+    //.two-columns-text,
+    //.tree-columns-text
+{
+    h1, h2, h3, h4, h5 {
+        //margin-bottom: 1.5rem;
+        column-span: all;
+    }
+
+    li {
+        position: relative;
+        list-style-type: none;
+    }
+
+    //li:before {
+    //    content: "";
+    //    position: absolute;
+    //    top: 5px;
+    //    left: -22px;
+    //    width: 16px;
+    //    height: 16px;
+    //    background-image: url('/comet.svg');
+    //
+    //}
+}
+

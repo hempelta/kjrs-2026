@@ -1,0 +1,30 @@
+// =========================================================
+// Global Focus Ring
+// Uses the accent-outline pattern for consistency.
+// Visible only on keyboard navigation (:focus-visible).
+// =========================================================
+
+:focus-visible {
+    outline: var(--ot-accent-outline-width) solid var(--ot-accent-outline-color);
+    outline-offset: var(--ot-accent-outline-offset);
+    border-radius: var(--ot-radius-small);
+}
+
+:focus:not(:focus-visible) {
+    outline: none;
+}
+
+// =========================================================
+// Bootstrap overrides
+// Bootstrap sets `outline: 0` + `box-shadow` on .nav-link
+// and .btn, which kills our global outline. We restore it.
+// =========================================================
+
+.nav-link:focus-visible,
+.btn:focus-visible,
+.dropdown-toggle:focus-visible {
+    outline: var(--ot-accent-outline-width) solid var(--ot-accent-outline-color);
+    outline-offset: var(--ot-accent-outline-offset);
+    border-radius: var(--ot-radius-small);
+    box-shadow: none;
+}

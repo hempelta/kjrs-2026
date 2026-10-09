@@ -1,0 +1,65 @@
+// =========================================================
+// Section Variants
+// Alternating backgrounds for visual rhythm
+// =========================================================
+
+.ot-section {
+    padding: var(--section-padding) 0;
+}
+
+.ot-section-compact {
+    padding: var(--section-padding-compact) 0;
+}
+
+.ot-section-default {
+    background-color: var(--color-bg-section);
+    color: var(--color-text-primary);
+}
+
+.ot-section-alt {
+    background-color: var(--color-bg-elevated);
+    color: var(--color-text-primary);
+}
+
+.ot-section-dark {
+    background-color: $navy-900;
+    color: $navy-50;
+
+    h1, h2, h3, h4, h5, h6 {
+        color: $navy-50;
+    }
+
+    .lead {
+        color: $navy-200;
+    }
+
+    a {
+        color: $navy-100;
+        text-decoration-color: rgba($navy-100, 0.3);
+
+        &:hover {
+            color: #FFFFFF;
+            text-decoration-color: #FFFFFF;
+        }
+    }
+}
+
+.ot-section-accent {
+    background-color: $orange-50;
+    color: var(--color-text-primary);
+
+    [data-bs-theme="dark"] & {
+        background-color: $navy-800;
+        border-top: 2px solid $orange-500;
+    }
+}
+
+// Legacy section classes (backward compatibility)
+.section-dark {
+    background-color: var(--color-bg-page);
+    color: var(--color-text-primary);
+}
+
+.section-alt {
+    background-color: var(--color-bg-section);
+}

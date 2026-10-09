@@ -1,0 +1,9 @@
+@import "../../../Config/Variables";
+/* inter-regular - latin */
+@font-face {
+    font-display: swap;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    src: url('#{$site-url-prefix}/Fonts/Inter/inter-v20-latin-regular.woff2') format('woff2');
+}

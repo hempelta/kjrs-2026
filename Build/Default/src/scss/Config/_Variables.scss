@@ -1,0 +1,98 @@
+// Assets
+$site-url-prefix: '../../Resources/Assets/Website';
+
+// =========================================================
+// Navy Palette (Primary)
+// =========================================================
+$navy-950: #0A1118;
+$navy-900: #121B28;
+$navy-800: #1A2536;
+$navy-700: #1D2A3C;
+$navy-600: #2C3C55;
+$navy-500: #455A76;
+$navy-400: #5E7694;
+$navy-300: #8A9BB3;
+$navy-200: #B5C1D1;
+$navy-100: #DDE3EB;
+$navy-50:  #F0F3F7;
+
+// =========================================================
+// Accent Palette (Orange — from logo #f6882a)
+// 60-30-10 rule: Orange is strictly 10% accent
+// =========================================================
+$orange-700: #B5600A;
+$orange-600: #CF7210;
+$orange-500: #f6882a;
+$orange-400: #F89F4F;
+$orange-300: #FAB876;
+$orange-200: #FCD4A8;
+$orange-100: #FEECDA;
+$orange-50:  #FFF6ED;
+
+// =========================================================
+// Status Colors
+// =========================================================
+$status-success: #1B7A4A;
+$status-success-light: #2DA764;
+$status-warning: $orange-700;
+$status-danger: #C53030;
+$status-danger-light: #E53E3E;
+$status-info: $navy-600;
+
+// =========================================================
+// Social Media
+// =========================================================
+$color-brand-facebook: #1877f2;
+$color-brand-linkedin: #0073b1;
+
+// =========================================================
+// Bootstrap Variable Overrides
+// =========================================================
+$primary: $navy-600;
+$body-color: $navy-50;
+$body-bg: $navy-900;
+
+$headings-font-family: 'Source Serif 4', Georgia, 'Times New Roman', serif;
+$font-family-base: 'Inter', system-ui, -apple-system, sans-serif;
+
+$radius-small: 0.25rem;    // 4px
+$radius-medium: 0.5rem;    // 8px
+$radius-large: 0.75rem;    // 12px
+$radius-xlarge: 1rem;      // 16px
+
+$border-radius: $radius-medium;
+$btn-border-radius: $radius-medium;
+$card-border-radius: $radius-large;
+$border-radius-sm: $radius-small;
+$border-radius-lg: $radius-large;
+
+$link-color: $navy-100;
+$link-decoration: underline;
+
+$aspect-ratios: (
+    "1x1": 100%,
+    "4x3": calc(3 / 4 * 100%),
+    "3x2": calc(2 / 3 * 100%),
+    "16x9": calc(9 / 16 * 100%),
+    "21x9": calc(9 / 21 * 100%),
+    "3x4": calc(4 / 3 * 100%),
+    "2x3": calc(3 / 2 * 100%),
+    // Add more aspect ratios here
+    //"hero": calc(450 / 1296 * 100%),
+    //"slider": calc(526 / 1296 * 100%)
+);
+
+// =========================================================
+// Spacing Scale (8px base)
+// =========================================================
+$space-1:  0.25rem;  // 4px
+$space-2:  0.5rem;   // 8px
+$space-3:  0.75rem;  // 12px
+$space-4:  1rem;     // 16px
+$space-5:  1.5rem;   // 24px
+$space-6:  2rem;     // 32px
+$space-8:  3rem;     // 48px
+$space-10: 4rem;     // 64px
+$space-12: 5rem;     // 80px
+$space-16: 6rem;     // 96px
+$space-20: 8rem;     // 128px

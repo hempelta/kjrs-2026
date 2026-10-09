@@ -1,0 +1,84 @@
+@import "../Config/Variables";
+
+.sk-color-modes {
+    .btn-link.nav-link {
+        color: $navy-200;
+
+        &:hover,
+        &:focus {
+            color: $navy-50;
+        }
+    }
+
+    .dropdown-menu {
+        background-color: $navy-700;
+        border-color: $navy-600;
+        border-radius: var(--ot-radius-medium);
+        padding: 0.25rem 0.3rem;
+    }
+
+    .dropdown-item {
+        margin: 2px 0;
+        color: $navy-200;
+        border-radius: 0.375rem;
+        transition: outline-color 150ms ease, color 150ms ease;
+        outline: var(--ot-accent-outline-width) solid transparent;
+        outline-offset: var(--ot-accent-outline-offset);
+
+        &:focus,
+        &:active {
+            background-color: transparent;
+            color: $navy-200;
+        }
+
+        &:hover {
+            background-color: transparent;
+            color: $navy-50;
+            outline-color: var(--ot-accent-outline-color);
+        }
+
+        &:focus-visible {
+            background-color: transparent;
+            color: $navy-50;
+            outline-color: var(--ot-accent-outline-color);
+        }
+
+        &.active {
+            background-color: transparent;
+            color: #FFFFFF;
+            outline-color: var(--ot-accent-outline-color);
+        }
+    }
+
+    [data-bs-theme="light"] & {
+        .btn-link.nav-link {
+            color: $navy-500;
+
+            &:hover,
+            &:focus-visible {
+                color: $navy-900;
+            }
+        }
+
+        .dropdown-menu {
+            background-color: #FFFFFF;
+            border-color: $navy-100;
+        }
+
+        .dropdown-item {
+            color: $navy-900;
+
+            &:hover {
+                background-color: transparent;
+                color: $navy-900;
+                outline-color: var(--ot-accent-outline-color);
+            }
+
+            &:focus-visible {
+                background-color: transparent;
+                color: $navy-900;
+                outline-color: var(--ot-accent-outline-color);
+            }
+        }
+    }
+}

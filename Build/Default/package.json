@@ -1,0 +1,37 @@
+{
+	"packageManager": "npm@10.9.4",
+	"devDependencies": {
+		"@fortawesome/fontawesome-pro": "^7.3.1",
+		"@popperjs/core": "^2.11.8",
+		"autoprefixer": "^10.5.0",
+		"bootstrap": "^5.3.8",
+		"bootstrap-icons": "^1.13.1",
+		"copy-webpack-plugin": "^14.0.0",
+		"css-loader": "^7.1.4",
+		"css-minimizer-webpack-plugin": "^8.0.0",
+		"@fancyapps/ui": "^6.1.13",
+		"mini-css-extract-plugin": "^2.10.2",
+		"postcss": "^8.5.25",
+		"postcss-loader": "^8.2.1",
+		"postcss-preset-env": "^11.3.0",
+		"sass": "1.59.3",
+		"sass-loader": "^17.0.0",
+		"terser-webpack-plugin": "^5.6.1",
+		"webpack": "^5.109.2",
+		"webpack-bundle-analyzer": "^5.3.1",
+		"webpack-cli": "^7.2.2",
+		"webpack-dev-server": "^5.2.4"
+	},
+	"scripts": {
+		"build": "webpack build --mode=production --progress",
+		"watch": "webpack --watch --mode=development --env watch=true",
+		"start": "webpack serve --mode=development",
+		"analyze": "webpack build --mode=production --analyze",
+		"postinstall": "node bin/upgrade-bootstrap.js --auto-downgrade"
+	},
+	"overrides": {
+		"sockjs": {
+			"uuid": "^11.1.1"
+		}
+	}
+}

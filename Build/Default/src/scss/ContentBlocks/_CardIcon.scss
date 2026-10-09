@@ -1,0 +1,46 @@
+@import "../Config/Variables";
+
+.cb-card-icon {
+    padding: var(--space-5);
+    transition: transform 300ms ease, box-shadow 300ms ease;
+
+    @media (prefers-reduced-motion: no-preference) {
+        &:hover {
+            transform: scale(1.02);
+            box-shadow: var(--shadow-card-hover);
+        }
+    }
+
+    .cb-card-icon-header {
+        margin-bottom: var(--space-4);
+    }
+
+    .cb-card-icon-badge {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 48px;
+        height: 48px;
+        border-radius: var(--ot-radius-medium);
+        background-color: rgba($orange-500, 0.12);
+        color: $orange-500;
+        margin-bottom: var(--space-3);
+    }
+
+    .cb-card-icon-title {
+        font-family: 'Inter', system-ui, -apple-system, sans-serif;
+        font-size: var(--font-size-h5);
+        font-weight: 600;
+        color: var(--color-text-primary);
+        margin-bottom: 0;
+    }
+
+    .cb-card-icon-body {
+        color: var(--color-text-secondary);
+        font-size: var(--font-size-body);
+
+        p:last-child {
+            margin-bottom: 0;
+        }
+    }
+}

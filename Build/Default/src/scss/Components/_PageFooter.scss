@@ -1,0 +1,44 @@
+@import "../Config/Variables";
+
+// #pageFooter is the markup SiteKit Base renders (Footer/Variants/1.fluid.html).
+// It ships with .bg-primary .text-white — the gradient below overrides both,
+// so the footer matches the oliver-thiele-v14 look without a template override.
+.ot-page-footer,
+#pageFooter {
+    background: linear-gradient(
+        180deg,
+        $navy-700 0%,
+        $navy-800 40%,
+        $navy-900 100%
+    );
+    border-top: 1px solid $orange-500;
+    margin-top: var(--section-padding);
+    color: $navy-100;
+
+    h2, h3, h4, h5, h6 {
+        font-family: 'Inter', system-ui, -apple-system, sans-serif;
+        color: #FFFFFF;
+    }
+
+    a {
+        color: $navy-50;
+        text-decoration: underline;
+        text-decoration-color: rgba($navy-50, 0.3);
+        text-underline-offset: 0.25em;
+        transition: color 150ms ease, text-decoration-color 150ms ease, text-underline-offset 150ms ease;
+
+        &:hover {
+            color: #FFFFFF;
+            text-decoration-color: #FFFFFF;
+            text-underline-offset: 0.35em;
+        }
+    }
+
+    .nav-link {
+        padding-left: 0;
+    }
+
+    hr {
+        border-color: rgba(255, 255, 255, 0.15);
+    }
+}

@@ -1,0 +1,52 @@
+@import "../Config/Variables";
+
+// bg-light on the breadcrumb wrapper comes from SiteKit vendor template.
+// Override via Bootstrap variable to match our dark-mode-first theme.
+.bg-light {
+    --bs-light-rgb: #{red($navy-800)}, #{green($navy-800)}, #{blue($navy-800)};
+    --bs-bg-opacity: 1;
+
+    [data-bs-theme="light"] & {
+        --bs-light-rgb: #{red($navy-50)}, #{green($navy-50)}, #{blue($navy-50)};
+    }
+}
+
+.breadcrumb {
+    --bs-breadcrumb-divider-color: #{$navy-400};
+    --bs-breadcrumb-item-active-color: #{$navy-300};
+    font-size: var(--font-size-small);
+}
+
+.breadcrumb-item a {
+    color: $navy-200;
+    text-decoration: none;
+
+    &:hover {
+        color: $navy-50;
+        text-decoration: underline;
+        text-underline-offset: 3px;
+    }
+}
+
+.breadcrumb-item.active {
+    color: $navy-300;
+}
+
+[data-bs-theme="light"] {
+    .breadcrumb {
+        --bs-breadcrumb-divider-color: #{$navy-400};
+        --bs-breadcrumb-item-active-color: #{$navy-500};
+    }
+
+    .breadcrumb-item a {
+        color: $navy-600;
+
+        &:hover {
+            color: $navy-900;
+        }
+    }
+
+    .breadcrumb-item.active {
+        color: $navy-500;
+    }
+}

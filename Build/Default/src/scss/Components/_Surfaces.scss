@@ -1,0 +1,79 @@
+@import "../Config/Variables";
+
+// =========================================================
+// Surface Variants
+//
+// Full-width background containers that set both visual
+// appearance AND theme context (data-bs-theme) so all
+// children (buttons, links, text) adapt automatically.
+//
+// Usage in Fluid templates:
+//   <div class="ot-surface-dark" data-bs-theme="dark">
+//   <div class="ot-surface-gradient"> (inherits theme)
+//   <div class="ot-surface-light" data-bs-theme="light">
+//   <div class="ot-surface-accent" data-bs-theme="dark">
+//
+// The data-bs-theme attribute is required on the HTML
+// element — CSS classes handle the visuals, the attribute
+// handles the token scoping for child elements.
+// =========================================================
+
+[class^="ot-surface"] .ot-content-element-margin-bottom:last-child {
+    margin-bottom: 0;
+}
+
+[class^="ot-surface"] {
+    margin-bottom: var(--ot-content-element-margin-bottom);
+
+    &:has(+ [class^="ot-surface"]) {
+        margin-bottom: 0;
+    }
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.ot-surface-dark {
+    background-color: $navy-800;
+    color: $navy-100;
+    padding: var(--section-padding) 0;
+}
+
+.ot-surface-gradient {
+    background: linear-gradient(135deg, $navy-950 0%, $navy-800 50%, $navy-700 100%);
+    color: $navy-100;
+    padding: var(--section-padding) 0;
+
+    [data-bs-theme="light"] & {
+        background: linear-gradient(135deg, #FFFFFF 0%, $navy-100 50%, $navy-200 100%);
+        color: $navy-900;
+    }
+}
+
+.ot-surface-light {
+    background-color: #FFFFFF;
+    color: $navy-900;
+    padding: var(--section-padding) 0;
+
+    [data-bs-theme="dark"] & {
+        background-color: $navy-300;
+
+        p, li, td, th, dd, dt, label, figcaption {
+            color: inherit;
+        }
+    }
+}
+
+.ot-surface-elevated {
+    background-color: var(--color-bg-elevated);
+    color: var(--color-text-primary);
+    padding: var(--section-padding) 0;
+}
+
+.ot-surface-accent {
+    background: linear-gradient(135deg, $navy-900 0%, $navy-800 100%);
+    border-top: 1px solid $orange-500;
+    color: $navy-100;
+    padding: var(--section-padding) 0;
+}

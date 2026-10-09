@@ -1,0 +1,42 @@
+@import "../Config/Variables";
+
+$accordion-chevron-light: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23121B28'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708'/></svg>");
+$accordion-chevron-dark: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23DDE3EB'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708'/></svg>");
+$accordion-chevron-white: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23FFFFFF'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708'/></svg>");
+$accordion-chevron-on-accent: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23121B28'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708'/></svg>");
+
+.accordion {
+    --bs-accordion-color: var(--color-text-primary);
+    --bs-accordion-bg: transparent;
+    --bs-accordion-border-color: var(--color-border-default);
+    --bs-accordion-btn-color: var(--color-text-primary);
+    --bs-accordion-btn-bg: var(--color-border-subtle);
+    --bs-accordion-active-color: #FFFFFF;
+    --bs-accordion-active-bg: var(--color-accent);
+    --bs-accordion-btn-icon: #{$accordion-chevron-light};
+    --bs-accordion-btn-active-icon: #{$accordion-chevron-white};
+    --bs-accordion-btn-focus-box-shadow: 0 0 0 0.2rem rgba($orange-500, 0.25);
+}
+
+.accordion-button {
+    font-weight: 500;
+
+    &::after {
+        filter: none;
+    }
+
+    &:not(.collapsed) {
+        color: $navy-900;
+    }
+}
+
+[data-bs-theme="dark"] {
+    .accordion-button::after {
+        --bs-accordion-btn-icon: #{$accordion-chevron-dark};
+        --bs-accordion-btn-active-icon: #{$accordion-chevron-on-accent};
+    }
+
+    .accordion-button:not(.collapsed) {
+        color: $navy-900;
+    }
+}
