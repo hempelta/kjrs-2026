@@ -3,6 +3,7 @@
 namespace Deployer;
 
 require 'recipe/common.php';
+require_once __DIR__ . '/vendor/autoload.php';
 
 /*
  * Host data is NOT part of this file — the repository is public.
@@ -14,6 +15,7 @@ require 'recipe/common.php';
  *   REMOTE_PROJECT_ROOT  Deployer's deploy_path on the server
  *   DOMAIN               Public domain without scheme
  *   PHP_BIN              Optional: PHP binary on the server, if /usr/bin/php is too old
+ *   DEPLOY_HTTP_AUTH     Optional: user:password of a target behind an HTTP auth prompt
  */
 function targetEnv(string $file): array
 {
@@ -21,8 +23,9 @@ function targetEnv(string $file): array
     if (!is_file($path)) {
         return [];
     }
-    // RAW: values such as argon2 hashes contain "$" and must stay untouched
-    return parse_ini_file($path, false, INI_SCANNER_RAW) ?: [];
+    // The same parser TYPO3 uses in config/system/additional.php. Not
+    // parse_ini_file(): .env is no INI file, a "#" comment with "(" breaks it.
+    return \Dotenv\Dotenv::parse((string)file_get_contents($path));
 }
 
 function targetHost(string $alias, string $envFile, string $branch, string $context, int $keepReleases): void
@@ -42,6 +45,7 @@ function targetHost(string $alias, string $envFile, string $branch, string $cont
         ->set('deploy_path', $env['REMOTE_PROJECT_ROOT'] ?? '')
         ->set('public_url', ($env['DOMAIN'] ?? '') !== '' ? 'https://' . $env['DOMAIN'] : '')
         ->set('php_bin', $env['PHP_BIN'] ?? '')
+        ->set('http_auth', $env['DEPLOY_HTTP_AUTH'] ?? '')
         ->set('keep_releases', $keepReleases);
 }
 
@@ -75,8 +79,8 @@ set('bin/composer', function () {
 /*
  * URL used to reset the opcache. Defaults to the public URL. A target behind
  * an HTTP auth prompt either exempts `_dep_opcache_reset_*.php` from the prompt
- * in its shared public/.htaccess, or the deploying machine sets
- * DEPLOY_HTTP_AUTH (user:password) — never put the password in this file.
+ * in its shared public/.htaccess, or sets DEPLOY_HTTP_AUTH (user:password) in
+ * its env file or the environment — never put the password in this file.
  */
 set('opcache_url', function () {
     return get('public_url');
@@ -402,7 +406,7 @@ task('deploy:opcache', function () {
         . escapeshellarg('<?php header("Cache-Control: no-store"); $ok = function_exists("opcache_reset") && opcache_reset(); clearstatcache(true); echo basename(dirname(__DIR__)), "|", $ok ? "reset" : "NO-RESET";')
         . " > $target");
 
-    $auth = getenv('DEPLOY_HTTP_AUTH');
+    $auth = get('http_auth') !== '' ? get('http_auth') : getenv('DEPLOY_HTTP_AUTH');
     $credentials = $auth ? '-u ' . escapeshellarg($auth) . ' ' : '';
     $url = get('opcache_url');
     $expected = $release . '|reset';
