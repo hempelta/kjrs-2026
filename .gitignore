@@ -7,7 +7,7 @@ Thumbs.db
 nbproject/
 
 /packages/*
-!/packages/fiz-kjrs-2026/
+!/packages/fiz-kjrs/
 
 # TYPO3
 
@@ -43,7 +43,7 @@ auth.json
 # DDEV
 
 /.ddev/*
-!/ddev/config.yaml
+!/.ddev/config.yaml
 
 .env
 .env.*
