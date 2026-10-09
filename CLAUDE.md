@@ -86,6 +86,9 @@ Offene Fragen an den Kunden werden in `docs/fragen-an-kunden.md` gesammelt und g
 
 Umgesetzt: Seitenbaum aus `20260807-Seitenbaum-Struktur/` (am 09.10.2026 in der lokalen DDEV-DB
 angelegt; Seiten liegen nur in der Datenbank, nicht im Repo).
+Die SiteKit-Demo-Seiten (Produkte, Dokumentation, Demo-Inhalte) bleiben als Referenz im Backend,
+sind aber verborgen inkl. Unterseiten (`hidden` + `extendToSubpages`). Das SiteKit hat dafür keinen
+eigenen Schalter.
 
 ## Weiterleitungen und Go-live
 
