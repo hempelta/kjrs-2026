@@ -1,2 +1,7 @@
 sitekit.menus.main.variant: Advanced
 sitekit.menus.main.toggler.variant: Animated
+# Until go-live: no automatic redirects or slug updates when pages are renamed
+# or moved — the restructuring would leave hundreds of useless sys_redirect
+# records. Switch both to true at go-live (see go-live checklist issue).
+redirects.autoUpdateSlugs: false
+redirects.autoCreateRedirects: false

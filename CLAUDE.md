@@ -84,6 +84,21 @@ ist öffentlich. Die Historie liegt nur lokal. Projektdaten ohne Personenbezug (
 Umgesetzt: Seitenbaum aus `20260807-Seitenbaum-Struktur/` (am 09.10.2026 in der lokalen DDEV-DB
 angelegt; Seiten liegen nur in der Datenbank, nicht im Repo).
 
+## Weiterleitungen und Go-live
+
+Alte URLs von www.kjrs.de werden als `sys_redirect`-Datensätze (EXT:redirects) weitergeleitet,
+nicht per `.htaccess` — so bleiben doppelte Weiterleitungen im Redirect-Modul sichtbar. Quelle ist
+`docs/weiterleitungen/weiterleitungsliste.csv` (Status `unverändert` · `sicher` · `Vorschlag` ·
+`offen` · `entfällt`); Import mit `ddev exec php bin-dev/import-redirects.php [Status …]`
+(Standard `sicher`, überspringt vorhandene Quellpfade, Ziel als `t3://page?uid=…`, Status 301).
+
+**Bis zum Go-live** stehen `redirects.autoUpdateSlugs` und `redirects.autoCreateRedirects` in
+`config/sites/main/settings.yaml` auf `false`: Umbauen und Umbenennen soll keine automatischen
+Redirects hinterlassen. Ohne die Einträge gilt `true` (Vorgabe in EXT:redirects). Im
+Composer-Modus lässt sich die Extension nicht abschalten, die beiden Schalter sind die Stelle.
+
+Alles, was zum Go-live erledigt sein muss: GitHub-Issue #2 „Go-live checklist".
+
 ## Deployment
 
 Deployer 8 (`deploy.php`), Ziele `stage` (Branch `develop`, `Production/Staging`) und `live`

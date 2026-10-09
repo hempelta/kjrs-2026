@@ -17,6 +17,7 @@ dependencies:
 #  - oliverthiele/ot-sitekit-base-felogin
   - typo3/form
   - typo3/seo-sitemap
+  - typo3/redirects
 #  - oliverthiele/ot-jobs
   - oliverthiele/ot-cefluidtemplates
 #  - oliverthiele/ot-sitekit-ce-card

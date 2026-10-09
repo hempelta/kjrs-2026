@@ -74,6 +74,10 @@ return [
             'lightboxTypes' => 'lightbox, lightboxIframe',
             'pathIcons' => '',
         ],
+        'redirects' => [
+            'showCheckIntegrityInfoInReports' => '1',
+            'showCheckIntegrityInfoInReportsSeconds' => '86400',
+        ],
         'scheduler' => [
             'maxLifetime' => '1440',
         ],

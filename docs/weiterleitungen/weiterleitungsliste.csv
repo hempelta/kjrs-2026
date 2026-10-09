@@ -1,0 +1,74 @@
+alt;neu;neue_uid;status;titel_alt;anmerkung
+/;/;1;unverändert;Start;
+/ueber-uns;/ueber-uns;37;unverändert;Über uns;
+/ueber-uns/gremien;/ueber-uns/gremien;96;unverändert;Gremien;
+/ueber-uns/gremien/hauptausschuss;/ueber-uns/gremien/hauptausschuss;99;unverändert;Hauptausschuss;
+/ueber-uns/gremien/vollversammlung;/ueber-uns/gremien/vollversammlung;98;unverändert;Vollversammlung;
+/ueber-uns/gremien/vorstand;/ueber-uns/gremien/vorstand;97;unverändert;Vorstand;
+/ueber-uns/geschaeftsstelle;/ueber-uns/geschaeftsstelle;95;unverändert;Geschäftsstelle;
+/service;/service;104;unverändert;Service;
+/service/stellen;/service/stellen;106;unverändert;Stellenausschreibungen;
+/service/materialien;/service/materialien;107;unverändert;Materialien;
+/positionen;/themen/jugendpolitik/positionen-und-stellungnahmen;70;sicher;Positionen;
+/positionen/jugendpolitische-dokumente;/themen/jugendpolitik/positionen-und-stellungnahmen;70;sicher;Jugendpolitische Dokumente;
+/arbeitsschwerpunkte;/themen;67;sicher;Arbeitsschwerpunkte;
+/ueber-uns/news;/news-termine/nachrichten;65;sicher;News;
+/ueber-uns/termine;/news-termine/termine;66;sicher;Termine;
+/ueber-uns/aussenvertretungen;/themen/jugendpolitik/aussenvertretung-und-aktuelles;69;sicher;Außenvertretungen;
+/ueber-uns/verein/satzung;/ueber-uns/satzung;103;sicher;Satzung;
+/ueber-uns/verein/leitbild;/ueber-uns/leitbild;93;sicher;Leitbild;
+/ueber-uns/gremien/arbeitsgemeinschaften;/ueber-uns/ags-und-vernetzung;102;sicher;Arbeitsgruppen;
+/ueber-uns/gremien/kommissionen;/ueber-uns/gremien/revisionskommission;100;sicher;Revisionskommission;
+/ueber-uns/mitglieder/jugendverbaende;/ueber-uns/mitglieder;94;sicher;Jugendverbände;Unterseiten der Mitglieder entfallen in der neuen Struktur
+/ueber-uns/mitglieder/kommunale-jugenringe;/ueber-uns/mitglieder;94;sicher;Kommunale Jugendringe;
+/ueber-uns/mitglieder/fachorganisationen;/ueber-uns/mitglieder;94;sicher;Fachorganisationen;
+/ueber-uns/mitglieder/foerdermitglieder;/ueber-uns/mitglieder;94;sicher;Fördermitglieder;
+/jugendverbaende-1;/ueber-uns/mitglieder;94;sicher;Kommunale Jugendringe;Dublette der alten Seite
+/jugendverbaende-1-1;/ueber-uns/mitglieder;94;sicher;Fachorganisationen;Dublette der alten Seite
+/arbeitsschwerpunkte/interessenvertretung;/themen/jugendpolitik;68;sicher;Interessenvertretung;
+/arbeitsschwerpunkte/jugendbeteiligung;/themen/jugendbeteiligung;85;sicher;Jugendbeteiligung;
+/arbeitsschwerpunkte/kinderschutz-praevention;/themen/verbandsarbeit/kinderschutz-und-praevention;72;sicher;Kinderschutz / Prävention;
+/arbeitsschwerpunkte/nachhaltigkeit;/themen/verbandsarbeit/bne-und-nachhaltigkeit;79;sicher;Nachhaltigkeit und BNE;
+/arbeitsschwerpunkte/datenschutz-im-verein;/themen/verbandsarbeit/datenschutz-und-digitales-arbeiten;78;sicher;Datenschutz im Verein;
+/arbeitsschwerpunkte/digitales-arbeiten;/themen/verbandsarbeit/datenschutz-und-digitales-arbeiten;78;sicher;Digitales Arbeiten;
+/arbeitsschwerpunkte/politische-jugendbildung;/themen/verbandsarbeit/politische-bildung;74;sicher;Politische Jugendbildung;
+/arbeitsschwerpunkte/fachkraefte;/themen/fachkraeftesicherung;83;sicher;Fachkräftesicherung;
+/arbeitsschwerpunkte/inklusion/inklusion-durch-innovation;/themen/verbandsarbeit/inklusion/inklusion-durch-innovation;81;sicher;Inklusion durch Innovation;steht in Signaturen der Geschäftsstelle
+/arbeitsschwerpunkte/juleica-ehrenamt/juleica-handbuch;/juleica/handbuch;91;sicher;Juleica-Handbuch;
+/juleica-termine;/juleica/termine;92;sicher;Juleica-Termine;
+/wahlen;/themen/verbandsarbeit/politische-bildung/wahlen;76;sicher;Politische Wahlen;
+/ueber-uns/verein;/ueber-uns;37;Vorschlag;Verein;
+/ueber-uns/verein/kjrs-heute;/ueber-uns;37;Vorschlag;KJRS heute;keine eigene Seite mehr
+/ueber-uns/verein/historie;/ueber-uns;37;Vorschlag;KJRS Historie;keine eigene Seite mehr
+/ueber-uns/verein/30-jahre-kjrs;/ueber-uns;37;Vorschlag;30 Jahre KJRS;keine eigene Seite mehr
+/ueber-uns/verein/leitbild/mitglied-werden;/ueber-uns/mitglieder;94;Vorschlag;Mitglied werden;
+/arbeitsschwerpunkte/juleica-ehrenamt;/juleica;89;Vorschlag;Juleica / Ehrenamt;alternativ Ehrenamt und Engagementförderung
+/arbeitsschwerpunkte/juleica-ehrenamt/juleica-bag;/juleica;89;Vorschlag;Juleica-Bag;
+/juleica-termine/detailansicht;/juleica/termine;92;Vorschlag;Detailansicht;Detailansicht ohne Termin
+/ueber-uns/termine/detailansicht/spieleseminar;/news-termine/termine;66;Vorschlag;Spieleseminar;einzelner Termin
+/arbeitsschwerpunkte/interessenvertretung/zahltag;/themen/jugendpolitik;68;Vorschlag;#ZAHLTAG;
+/arbeitsschwerpunkte/interessenvertretung/haushaltsverhandlungen;/themen/jugendpolitik;68;Vorschlag;Haushaltsverhandlungen;
+/eckpunktepapier;/themen/jugendpolitik/positionen-und-stellungnahmen;70;Vorschlag;Eckpunktepapier zur Landtagswahl 2024;
+/arbeitsschwerpunkte/digitales-arbeiten/digitale-tools-fuer-die-zusammenarbeit;/themen/verbandsarbeit/datenschutz-und-digitales-arbeiten;78;Vorschlag;Digitale Tools für die Zusammenarbeit;
+/arbeitsschwerpunkte/digitales-arbeiten/video-und-audiokonferenzen;/themen/verbandsarbeit/datenschutz-und-digitales-arbeiten;78;Vorschlag;Video- und Audiokonferenzen;
+/arbeitsschwerpunkte/digitales-arbeiten/verschluesselung-backup-wlan;/themen/verbandsarbeit/datenschutz-und-digitales-arbeiten;78;Vorschlag;Verschlüsselung, Backup, WLAN;
+/arbeitsschwerpunkte/digitales-arbeiten/messenger;/themen/verbandsarbeit/datenschutz-und-digitales-arbeiten;78;Vorschlag;Messenger;
+/arbeitsschwerpunkte/gesellung-junger-menschen;/themen/jugendbeteiligung;85;Vorschlag;Gesellung junger Menschen;
+/arbeitsschwerpunkte/gesellung-junger-menschen/flexibles-jugendmanagement;/themen/jugendbeteiligung/flex;88;Vorschlag;Flexibles Jugendmanagement;Annahme: FLEX = Flexibles Jugendmanagement
+/fjm-standorte;/themen/jugendbeteiligung/flex;88;Vorschlag;Flexibles Jugendmanagement | Standorte;Annahme: FLEX = Flexibles Jugendmanagement
+/arbeitsschwerpunkte/kinderschutz-bildungen;/themen/verbandsarbeit/kinderschutz-und-praevention;72;Vorschlag;Aus- und Fortbildungen (Kinderschutz);
+/modulreihe-kinderschutz-2026;/themen/verbandsarbeit/kinderschutz-und-praevention;72;Vorschlag;Online-Modulreihe Klare Sicht im Kinderschutz 2026;
+/modulreihe-inklusive-ferienfreizeiten;/themen/verbandsarbeit/inklusion;80;Vorschlag;Modulreihe Inklusive Ferienfreizeiten;
+/workshop-bne;/themen/verbandsarbeit/bne-und-nachhaltigkeit;79;Vorschlag;Vom Wissen zum Handeln!;
+/rechtspopulismus;/themen/verbandsarbeit/politische-bildung/gegenrede;77;Vorschlag;Umgang mit rechtspopulistischen Akteuren;
+/demokratieordner;/themen/verbandsarbeit/politische-bildung/werkstaetten-der-demokratie;75;Vorschlag;Demokratieordner;
+/wimmelbild;/themen/verbandsarbeit/politische-bildung;74;Vorschlag;Wimmelbild Grundrechte;
+/arbeitsschwerpunkte/qualitaetsentwicklung;;;offen;Qualitätsentwicklung;keine passende Seite im neuen Baum
+/datenschutz-bewerbung;;;offen;Datenschutz Bewerber*innen;wird die Seite weiter gebraucht (z. B. bei Stellen)?
+/jugend-im-strukturwandel-lausitz;;;offen;Jugend im Strukturwandel (Lausitzer Revier);keine passende Seite im neuen Baum
+/sozmanagement;;;offen;Workshop-Reihe SozManagement;keine passende Seite im neuen Baum
+/fishbowl;;;offen;Die Fishbowl-Diskussionsmethode;keine passende Seite im neuen Baum
+/ausschlussklausel;;;offen;Ausschlussklausel;keine passende Seite im neuen Baum
+/ueber-uns/aktuelles/detailansicht;;;entfällt;Detailansicht News;leitet heute schon auf die Startseite
+/ueber-uns/aktuelles/detailansicht-1;;;entfällt;Detailansicht News;leitet heute schon auf die Startseite
+/ueber-uns/termine/detailansicht;;;entfällt;Detailansicht Termine;leitet heute schon auf die Startseite

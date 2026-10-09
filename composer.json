@@ -27,7 +27,7 @@
 		"ext-dom": "*",
 		"ext-libxml": "*",
 		"erecht24/er24-rechtstexte": "^4.0",
-		"fizsoft/fiz-kjrs": "dev-main",
+		"fizsoft/fiz-kjrs": "@dev",
 		"friendsoftypo3/tt-address": "^10.0",
 		"georgringer/eventnews": "dev-main#0a32d7a301d17149d4b33ca4171545ea690d66b5",
 		"georgringer/news": "^14.0",
@@ -49,7 +49,8 @@
 		"oliverthiele/ot-sitekit-ce-texticon": "^4.0",
 		"oliverthiele/ot-sitekit-ce-textmedia": "^3.0",
 		"oliverthiele/ot-testimonials": "^1.0",
-		"oliverthiele/ot-timeline": "^2.0"
+		"oliverthiele/ot-timeline": "^2.0",
+		"typo3/cms-redirects": "^14.3"
 	},
 	"require-dev": {
 		"deployer/deployer": "^8.0",

@@ -6,6 +6,17 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres
 to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [Unreleased]
+
+### Added
+
+- Add EXT:redirects; automatic redirects and slug updates are disabled until go-live (#2)
+- Add redirect list for the old kjrs.de URLs and `bin-dev/import-redirects.php` (#2)
+
+### Fixed
+
+- Fix Composer resolution of the sitepackage on branches other than `main` (`@dev` instead of `dev-main`)
+
 ## [0.1.0] — 2026-10-09
 
 ### Added
